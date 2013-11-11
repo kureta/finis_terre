@@ -24,15 +24,11 @@ public:
 	void mouseReleased(int x, int y, int button);
 	void windowResized(int w, int h);
 	
-	ofxKinect kinect;
-	
 	int nearThreshold;
 	int farThreshold;
 	
-	int angle;
-    int step;
-    int width;
-    int height;
+    const int width = 160;
+    const int height = 120;
 	
 	// used for viewing the point cloud
 	ofEasyCam easyCam;
