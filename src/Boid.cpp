@@ -85,12 +85,13 @@ ofVec3f Boid::steer(ofVec3f target, Boolean arrival)
         if (distance > 5.0f)
         {
             float mymy = 1024.f;
-            float rampedSpeed = maxSpeed*mymy*(distance/100);
-            float clippedSpeed = min(rampedSpeed, maxSpeed*mymy);
-            // ofVec3f desiredVelocity = targetOffset * (clippedSpeed/distance);
-            ofVec3f desiredVelocity = targetOffset * maxSpeed * mymy;
+            float rampedSpeed = maxSpeed*(distance/100);
+            float clippedSpeed = min(rampedSpeed, maxSpeed);
+            ofVec3f desiredVelocity = targetOffset * (clippedSpeed/distance);
             steer.set(desiredVelocity - vel);
-            //steer.limit(maxSteerForce*mymy);
+            steer.limit(maxSteerForce);
+        } else {
+            //pos = target;
         }
     }
     return steer;

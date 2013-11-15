@@ -1,6 +1,6 @@
 #include "testApp.h"
 
-string path = "yakin-on";
+string path = "yakin-hareketli";
 int numFrames = 0;
 int currentFrame = 1;
 bool playing = false;
@@ -20,6 +20,9 @@ struct myColor {
     float b;
     float a;
 };
+
+ofImage myImage;
+int snapCounter = 0;
 
 //--------------------------------------------------------------
 void testApp::setup() {
@@ -132,11 +135,13 @@ void testApp::draw() {
     easyCam.end();
 	
 	// draw instructions
+    /*
 	stringstream reportStream;
 	reportStream << "set near threshold " << nearThreshold << " (press: + -)" << endl
 	<< "set far threshold " << farThreshold << " (press: < >)"
 	<< ", fps: " << ofGetFrameRate() << endl;
 	ofDrawBitmapString(reportStream.str(),20,652);
+     */
 }
 
 void testApp::drawPointCloud() {
@@ -244,6 +249,11 @@ void testApp::keyPressed (int key) {
         case ' ':
             playing = !playing;
             finis.setPaused(!playing);
+            break;
+        case 'm':
+            myImage.grabScreen(0, 0, 1280, 720);
+            myImage.saveImage("partOfTheScreen-"+ofToString(snapCounter)+".png");
+            snapCounter++;
             break;
 	}
 }
