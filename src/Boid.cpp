@@ -8,6 +8,7 @@
 
 #include "Boid.h"
 
+
 Boid::Boid(ofVec3f inPos, ofColor ic)
 {
     pos.set(inPos);
@@ -17,9 +18,11 @@ Boid::Boid(ofVec3f inPos, ofColor ic)
     c = ic;
     cn = ic;
     maxSpeed = 8.0f; // maxSpeed = c.r *6.0/255 + 2;
+    maxPicSpeed = 32.0f;
     float sat = c.getSaturation() /255.0;
     float br = (c.getBrightness()/255.0);
     maxSteerForce = .1f; // maxSteerForce = .1 + (sat*br)*.1;
+    maxPicForce = 2.0f;
 }
 
 void Boid::colorSwap(ofColor nextColor)
@@ -30,8 +33,8 @@ void Boid::colorSwap(ofColor nextColor)
 // this function triggers boid behavior
 void Boid::flocking()
 {
-    acc += steer(ofVec3f(ofRandom(-50, 50), ofRandom(-50, 50)), false);
-    move();
+    acc += steer(ofVec3f(ofRandom(-2000, 2000), ofRandom(-2000,2000), ofRandom(100 ,2000)), false);
+    move(false);
     //checkBounds();
     //render();
 }
@@ -39,16 +42,20 @@ void Boid::flocking()
 // this function moves particles towards the picture
 void Boid::picture()
 {
-    if (pos!=initPos)
-        acc += steer(initPos, true) * 5.0f;
+    acc += steer(initPos, true) * 5.0f;
     //println(initPos);
-    move();
+    move(true);
 }
 
-void Boid::move()
+void Boid::move(bool arrival)
 {
     vel += acc; //add acceleration to velocity
-    vel.limit(maxSpeed); //make sure the velocity vector magnitude does not exceed maxSpeed
+    if (arrival)
+    {
+        vel.limit(maxPicSpeed); //make sure the velocity vector magnitude does not exceed maxSpeed
+    } else {
+        vel.limit(maxSpeed);
+    }
     pos += vel; //add velocity to position
     acc *= 0; //reset acceleration
     
@@ -59,6 +66,8 @@ void Boid::move()
     float hn = cn.getHue();
     float sn = cn.getSaturation();
     float bn = cn.getBrightness();
+    int a = c.a;
+    int an = cn.a;
     
     float delta = 4.0f;
     
@@ -67,6 +76,17 @@ void Boid::move()
     b -= (b-bn)/delta;
     
     c.setHsb(h, s, b);
+    
+    if (an < a){
+        a -= 5;
+    } else {
+        a += 10;
+    }
+    if (a > 255)
+        a = 255;
+    if (a < 0)
+        a = 0;
+    c.a = a;
 }
 
 //steering. If arrival==true, the boid slows to meet the target. Credit to Craig Reynolds
@@ -82,16 +102,18 @@ ofVec3f Boid::steer(ofVec3f target, Boolean arrival)
     {
         ofVec3f targetOffset = target - pos;
         float distance = targetOffset.length();
-        if (distance > 5.0f)
+        if (distance > 50.0f)
         {
-            float mymy = 1024.f;
-            float rampedSpeed = maxSpeed*(distance/100);
-            float clippedSpeed = min(rampedSpeed, maxSpeed);
+            float rampedSpeed = maxPicSpeed*(distance);
+            float clippedSpeed = min(rampedSpeed, maxPicSpeed);
             ofVec3f desiredVelocity = targetOffset * (clippedSpeed/distance);
             steer.set(desiredVelocity - vel);
-            steer.limit(maxSteerForce);
+            steer.limit(maxPicForce);
         } else {
-            //pos = target;
+            pos.set(initPos);
+            vel *= 0.0;
+            acc *= 0.0;
+            steer *= 0.0;
         }
     }
     return steer;

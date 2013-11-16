@@ -1,12 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxKinect.h"
 #include "ofxGamepadHandler.h"
 #include "Boid.h"
-
-// uncomment this to read from two kinects simultaneously
-//#define USE_TWO_KINECTS
+#include "threadedObject.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -48,4 +45,6 @@ public:
     
     void createBoids();
     vector<Boid> boids;
+    
+    threadedObject myImage[8];
 };

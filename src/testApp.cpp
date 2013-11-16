@@ -1,12 +1,18 @@
 #include "testApp.h"
 
-string path = "yakin-hareketli";
+string path = "sahne6";
 int numFrames = 0;
 int currentFrame = 1;
 bool playing = false;
 ofDirectory vert(path);
 ofDirectory col(path);
-ofSoundPlayer finis;
+
+vector<int> colors;
+vector<int> vertices;
+
+unsigned long long initialTime = 0;
+int frameTime = 0;
+
 
 struct myPoint {
     float x;
@@ -21,15 +27,37 @@ struct myColor {
     float a;
 };
 
-ofImage myImage;
 int snapCounter = 0;
 
 //--------------------------------------------------------------
 void testApp::setup() {
     //some path, may be absolute or relative to bin/data
-    finis.loadSound("finis-terre.wav");
-    finis.play();
-    finis.setPaused(!playing);
+    ofDirectory dir(path);
+    //only show png files
+    dir.allowExt("col");
+    //populate the directory object
+    dir.listDir();
+    
+    //go through and print out all the paths
+    for(int i = 0; i < dir.numFiles(); i++){
+        string temp = dir.getPath(i);
+        temp.erase(0,12);
+        temp.erase(temp.end()-4, temp.end());
+        colors.push_back(ofToInt(temp));
+    }
+    
+    ofDirectory dir2(path);
+    dir2.allowExt("vert");
+    //populate the directory object
+    dir2.listDir();
+    
+    //go through and print out all the paths
+    for(int i = 0; i < dir2.numFiles(); i++){
+        string temp = dir2.getPath(i);
+        temp.erase(0,14);
+        temp.erase(temp.end()-5, temp.end());
+        vertices.push_back(ofToInt(temp));
+    }
     
     //only show png files
     vert.allowExt("vert");
@@ -66,6 +94,8 @@ void testApp::setup() {
 	}
     
     createBoids();
+    ofSetBackgroundAuto(true);
+    initialTime = ofGetSystemTimeMicros();
 }
 
 //--------------------------------------------------------------
@@ -123,11 +153,21 @@ void testApp::update() {
 
 //--------------------------------------------------------------
 void testApp::draw() {
+    ofSetBackgroundAuto(true);
     if (playing)
+    {
+        frameTime = (int) (ofGetSystemTimeMicros() - initialTime)/3000;
+        
+        // currentFrame++;
+        // myImage[currentFrame%8].grabScreen(0, 0, 1280, 720);
+        // myImage[currentFrame%8].saveThreaded("exported-frames/" + ofToString(currentFrame) + ".png");
+    }
+    if (frameTime > vertices[currentFrame])
+    {
         currentFrame++;
+    }
     if (currentFrame > numFrames) {
         currentFrame = 1;
-        finis.setPositionMS(0);
     }
     
     easyCam.begin();
@@ -135,48 +175,54 @@ void testApp::draw() {
     easyCam.end();
 	
 	// draw instructions
-    /*
+    
 	stringstream reportStream;
 	reportStream << "set near threshold " << nearThreshold << " (press: + -)" << endl
 	<< "set far threshold " << farThreshold << " (press: < >)"
-	<< ", fps: " << ofGetFrameRate() << endl;
+	<< "fps: " << ofGetFrameRate() << endl
+    << "time: " << frameTime << endl
+    << "frame: " << currentFrame << endl;
+    
 	ofDrawBitmapString(reportStream.str(),20,652);
-     */
+    
 }
 
 void testApp::drawPointCloud() {
-    glPointSize(40);
-    
 	ofMesh mesh;
     mesh.setMode(OF_PRIMITIVE_POINTS);
+    ofMesh lines;
+    lines.setMode(OF_PRIMITIVE_POINTS);
     
-    const char *fname = (path + "/vertice" + ofToString(currentFrame) + ".vert").c_str();
-    ofBuffer shit = ofBufferFromFile(fname, true);
-    myPoint *lolo = (myPoint*)shit.getBinaryBuffer();
+    const char *fname = (path + "/vertice" + ofToString(vertices[currentFrame]) + ".vert").c_str();
+    ofBuffer temp = ofBufferFromFile(fname, true);
+    myPoint *fposition = (myPoint*)temp.getBinaryBuffer();
     
-    const char *fname2 = (path + "/color" + ofToString(currentFrame) + ".col").c_str();
-    ofBuffer shit2 = ofBufferFromFile(fname2, true);
-    myColor *lele = (myColor*)shit2.getBinaryBuffer();
+    const char *fname2 = (path + "/color" + ofToString(vertices[currentFrame]) + ".col").c_str();
+    ofBuffer temp2 = ofBufferFromFile(fname2, true);
+    myColor *fcolor = (myColor*)temp2.getBinaryBuffer();
     
     ofVec3f position;
     ofFloatColor color;
     
     for (int i = 0; i < 160*120; i++) {
-        position.x = lolo[i].x;
-        position.y = lolo[i].y;
-        position.z = lolo[i].z;
+        position.x = fposition[i].x;
+        position.y = fposition[i].y;
+        position.z = fposition[i].z;
         
-        color.r = lele[i].r;
-        color.g = lele[i].g;
-        color.b = lele[i].b;
+        color.r = fcolor[i].r;
+        color.g = fcolor[i].g;
+        color.b = fcolor[i].b;
         
-        if (position.distance(easyCam.getPosition()) < 1000.0f)
+        if (position.distance(easyCam.getPosition()) < 1000.0f && position.length() > 0.1)
         {
+            color.a = 255;
             boids[i].initPos = position;
             boids[i].cn = color;
             boids[i].picture();
+            lines.addVertex(position);
+            lines.addColor(ofColor(ofColor::blueSteel, 20));
         } else {
-            boids[i].cn = ofColor::white;
+            boids[i].cn = ofColor(255,255,255,0);
             boids[i].flocking();
         }
         mesh.addColor(boids[i].c);
@@ -204,12 +250,12 @@ void testApp::drawPointCloud() {
     ofEnablePointSprites();
     texture.getTextureReference().bind();
     float att[3] = { 1.0, 0.0, 0.0001f };
-	glPointSize(100);
+	glPointSize(50);
 	glPointParameterf(GL_POINT_SIZE_MIN, 1.0f);
 	glPointParameterf(GL_POINT_SIZE_MAX, 256.0f);
 	glPointParameterfv(GL_POINT_DISTANCE_ATTENUATION, att);
     mesh.drawVertices();
-    ofDisablePointSprites();
+    lines.drawVertices();
     if (useShader) shader.end();
     ofPopMatrix();
 }
@@ -248,12 +294,11 @@ void testApp::keyPressed (int key) {
 			
         case ' ':
             playing = !playing;
-            finis.setPaused(!playing);
             break;
-        case 'm':
-            myImage.grabScreen(0, 0, 1280, 720);
-            myImage.saveImage("partOfTheScreen-"+ofToString(snapCounter)+".png");
-            snapCounter++;
+        
+        case 'h':
+            myImage[currentFrame%8].grabScreen(0, 0, 1280, 720);
+            myImage[currentFrame%8].saveThreaded("exported-frames/" + ofToString(currentFrame) + ".png");
             break;
 	}
 }
