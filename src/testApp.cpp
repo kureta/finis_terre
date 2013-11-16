@@ -1,8 +1,8 @@
 #include "testApp.h"
 
-string path = "sahne6";
+string path = "take-08";
 int numFrames = 0;
-int currentFrame = 1;
+int currentFrame = 0;
 bool playing = false;
 ofDirectory vert(path);
 ofDirectory col(path);
@@ -29,6 +29,13 @@ struct myColor {
 
 int snapCounter = 0;
 
+float minx = -600.0f;
+float maxx = 900.0f;
+float miny = -1000.0f;
+float maxy = 815.0f;
+float minz = 1700.0f;
+float maxz = 2800.0f;
+
 //--------------------------------------------------------------
 void testApp::setup() {
     //some path, may be absolute or relative to bin/data
@@ -41,11 +48,11 @@ void testApp::setup() {
     //go through and print out all the paths
     for(int i = 0; i < dir.numFiles(); i++){
         string temp = dir.getPath(i);
-        temp.erase(0,12);
+        temp.erase(0,13);
         temp.erase(temp.end()-4, temp.end());
         colors.push_back(ofToInt(temp));
     }
-    
+    std::sort(colors.begin(), colors.end());
     ofDirectory dir2(path);
     dir2.allowExt("vert");
     //populate the directory object
@@ -54,11 +61,11 @@ void testApp::setup() {
     //go through and print out all the paths
     for(int i = 0; i < dir2.numFiles(); i++){
         string temp = dir2.getPath(i);
-        temp.erase(0,14);
+        temp.erase(0,15);
         temp.erase(temp.end()-5, temp.end());
         vertices.push_back(ofToInt(temp));
     }
-    
+    std::sort(vertices.begin(), vertices.end());
     //only show png files
     vert.allowExt("vert");
     col.allowExt("col");
@@ -95,7 +102,6 @@ void testApp::setup() {
     
     createBoids();
     ofSetBackgroundAuto(true);
-    initialTime = ofGetSystemTimeMicros();
 }
 
 //--------------------------------------------------------------
@@ -156,8 +162,7 @@ void testApp::draw() {
     ofSetBackgroundAuto(true);
     if (playing)
     {
-        frameTime = (int) (ofGetSystemTimeMicros() - initialTime)/3000;
-        
+        frameTime = (int) (ofGetSystemTimeMicros() - initialTime)/1000;
         // currentFrame++;
         // myImage[currentFrame%8].grabScreen(0, 0, 1280, 720);
         // myImage[currentFrame%8].saveThreaded("exported-frames/" + ofToString(currentFrame) + ".png");
@@ -168,6 +173,7 @@ void testApp::draw() {
     }
     if (currentFrame > numFrames) {
         currentFrame = 1;
+        initialTime = ofGetSystemTimeMicros();
     }
     
     easyCam.begin();
@@ -175,16 +181,19 @@ void testApp::draw() {
     easyCam.end();
 	
 	// draw instructions
-    
+    /*
 	stringstream reportStream;
 	reportStream << "set near threshold " << nearThreshold << " (press: + -)" << endl
 	<< "set far threshold " << farThreshold << " (press: < >)"
 	<< "fps: " << ofGetFrameRate() << endl
     << "time: " << frameTime << endl
-    << "frame: " << currentFrame << endl;
+    << "frame: " << currentFrame << endl
+    << "vertik: " << vertices[currentFrame] << endl
+    << "kamera: " << easyCam.getPosition() << endl
+    << minx << " - " << maxx << " - " << miny << " - " << maxy << " - " << minz << " - " << maxz << endl;
     
-	ofDrawBitmapString(reportStream.str(),20,652);
-    
+	ofDrawBitmapString(reportStream.str(),20,632);
+    */
 }
 
 void testApp::drawPointCloud() {
@@ -213,18 +222,27 @@ void testApp::drawPointCloud() {
         color.g = fcolor[i].g;
         color.b = fcolor[i].b;
         
-        if (position.distance(easyCam.getPosition()) < 1000.0f && position.length() > 0.1)
+        if (/*position.x < maxx &&
+            position.x > minx &&
+            position.y < maxy &&
+            position.y > miny &&
+            position.z < maxz &&
+            position.z > minz &&*/
+            ofVec3f(position.x,-position.y,-position.z).distance(easyCam.getPosition())< 2000.0f &&
+            position.length() > 10.0f)
         {
             color.a = 255;
             boids[i].initPos = position;
             boids[i].cn = color;
             boids[i].picture();
             lines.addVertex(position);
-            lines.addColor(ofColor(ofColor::blueSteel, 20));
+            lines.addColor(ofColor(ofColor::blueSteel, 65));
+            
         } else {
             boids[i].cn = ofColor(255,255,255,0);
             boids[i].flocking();
         }
+        
         mesh.addColor(boids[i].c);
         mesh.addVertex(boids[i].pos);
     }
@@ -250,7 +268,7 @@ void testApp::drawPointCloud() {
     ofEnablePointSprites();
     texture.getTextureReference().bind();
     float att[3] = { 1.0, 0.0, 0.0001f };
-	glPointSize(50);
+	glPointSize(100);
 	glPointParameterf(GL_POINT_SIZE_MIN, 1.0f);
 	glPointParameterf(GL_POINT_SIZE_MAX, 256.0f);
 	glPointParameterfv(GL_POINT_DISTANCE_ATTENUATION, att);
@@ -269,23 +287,51 @@ void testApp::exit() {
 void testApp::keyPressed (int key) {
 	switch (key) {
 		case 'a':
-			farThreshold ++;
-			if (farThreshold > 255) farThreshold = 255;
+			minx +=10.0f;
 			break;
 			
 		case 'z':
-			farThreshold --;
-			if (farThreshold < 0) farThreshold = 0;
+			minx -=10.0f;;
 			break;
 			
 		case 's':
-			nearThreshold ++;
-			if (nearThreshold > 255) nearThreshold = 255;
+			maxx +=10.0f;;
 			break;
 			
 		case 'x':
-			nearThreshold --;
-			if (nearThreshold < 0) nearThreshold = 0;
+			maxx-=10.0f;;
+			break;
+            
+        case 'd':
+			miny+=10.0f;;
+			break;
+			
+		case 'c':
+			miny-=10.0f;;
+			break;
+            
+        case 'f':
+			maxy+=10.0f;;
+			break;
+			
+		case 'v':
+			maxy-=10.0f;;
+			break;
+            
+        case 'g':
+			minz+=10.0f;;
+			break;
+			
+		case 'b':
+			minz-=10.0f;;
+			break;
+            
+        case 'h':
+			maxz+=10.0f;;
+			break;
+			
+		case 'n':
+			maxz-=10.0f;;
 			break;
 
         case 'u':
@@ -294,9 +340,10 @@ void testApp::keyPressed (int key) {
 			
         case ' ':
             playing = !playing;
+            initialTime = ofGetSystemTimeMicros();
             break;
         
-        case 'h':
+        case 'p':
             myImage[currentFrame%8].grabScreen(0, 0, 1280, 720);
             myImage[currentFrame%8].saveThreaded("exported-frames/" + ofToString(currentFrame) + ".png");
             break;
