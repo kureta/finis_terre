@@ -1,3 +1,5 @@
 ofxKinect
 ofxOsc
 ofxGamepad
+ofxMSAPingPong
+ofxMSAOpenCL

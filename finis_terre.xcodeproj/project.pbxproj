@@ -52,6 +52,12 @@
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		EF00D09A7AA7C08FDC63ED88 /* ofxGamepadHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57751ED3A944BF55EB9C9302 /* ofxGamepadHandler.cpp */; };
 		F4135EEFC911E9ED211FB6F9 /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = CF528C0E8DBFF5C31E8D6529 /* core.c */; };
+		FF2F5E4A18377B3F0034435E /* MSAOpenCL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF2F5E3618377B3F0034435E /* MSAOpenCL.cpp */; };
+		FF2F5E4B18377B3F0034435E /* MSAOpenCLBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF2F5E3818377B3F0034435E /* MSAOpenCLBuffer.cpp */; };
+		FF2F5E4C18377B3F0034435E /* MSAOpenCLImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF2F5E3A18377B3F0034435E /* MSAOpenCLImage.cpp */; };
+		FF2F5E4D18377B3F0034435E /* MSAOpenCLKernel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF2F5E3D18377B3F0034435E /* MSAOpenCLKernel.cpp */; };
+		FF2F5E4E18377B3F0034435E /* MSAOpenCLMemoryObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF2F5E3F18377B3F0034435E /* MSAOpenCLMemoryObject.cpp */; };
+		FF2F5E4F18377B3F0034435E /* MSAOpenCLProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF2F5E4118377B3F0034435E /* MSAOpenCLProgram.cpp */; };
 		FFD94D7E1828562A00E01259 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFD94D7C1828562A00E01259 /* Boid.cpp */; };
 /* End PBXBuildFile section */
 
@@ -206,6 +212,28 @@
 		F7FBC56859535E597B24BB91 /* NetworkingUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NetworkingUtils.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h; sourceTree = SOURCE_ROOT; };
 		FC5665461DF9211A8FB4AE83 /* ofxGamepadOIS.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadOIS.cpp; path = ../../../addons/ofxGamepad/src/ofxGamepadOIS.cpp; sourceTree = SOURCE_ROOT; };
 		FEDD2BE696CAB3D245F8279A /* MacInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacInputManager.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacInputManager.h; sourceTree = SOURCE_ROOT; };
+		FF2F5E3218377B3F0034435E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FF2F5E3318377B3F0034435E /* license.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.md; sourceTree = "<group>"; };
+		FF2F5E3418377B3F0034435E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		FF2F5E3618377B3F0034435E /* MSAOpenCL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCL.cpp; sourceTree = "<group>"; };
+		FF2F5E3718377B3F0034435E /* MSAOpenCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCL.h; sourceTree = "<group>"; };
+		FF2F5E3818377B3F0034435E /* MSAOpenCLBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLBuffer.cpp; sourceTree = "<group>"; };
+		FF2F5E3918377B3F0034435E /* MSAOpenCLBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLBuffer.h; sourceTree = "<group>"; };
+		FF2F5E3A18377B3F0034435E /* MSAOpenCLImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLImage.cpp; sourceTree = "<group>"; };
+		FF2F5E3B18377B3F0034435E /* MSAOpenCLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLImage.h; sourceTree = "<group>"; };
+		FF2F5E3C18377B3F0034435E /* MSAOpenCLImagePingPong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLImagePingPong.h; sourceTree = "<group>"; };
+		FF2F5E3D18377B3F0034435E /* MSAOpenCLKernel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLKernel.cpp; sourceTree = "<group>"; };
+		FF2F5E3E18377B3F0034435E /* MSAOpenCLKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLKernel.h; sourceTree = "<group>"; };
+		FF2F5E3F18377B3F0034435E /* MSAOpenCLMemoryObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLMemoryObject.cpp; sourceTree = "<group>"; };
+		FF2F5E4018377B3F0034435E /* MSAOpenCLMemoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLMemoryObject.h; sourceTree = "<group>"; };
+		FF2F5E4118377B3F0034435E /* MSAOpenCLProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLProgram.cpp; sourceTree = "<group>"; };
+		FF2F5E4218377B3F0034435E /* MSAOpenCLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLProgram.h; sourceTree = "<group>"; };
+		FF2F5E4318377B3F0034435E /* MSAOpenCLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLTypes.h; sourceTree = "<group>"; };
+		FF2F5E4518377B3F0034435E /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FF2F5E4618377B3F0034435E /* license.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.md; sourceTree = "<group>"; };
+		FF2F5E4718377B3F0034435E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		FF2F5E4918377B3F0034435E /* MSAPingPong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAPingPong.h; sourceTree = "<group>"; };
+		FF2F5E5118377BBA0034435E /* boids.cl */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.opencl; name = boids.cl; path = bin/data/kernels/boids.cl; sourceTree = "<group>"; };
 		FFD94D7C1828562A00E01259 /* Boid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boid.cpp; sourceTree = "<group>"; };
 		FFD94D7D1828562A00E01259 /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Boid.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -402,6 +430,8 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				FF2F5E3118377B3F0034435E /* ofxMSAOpenCL */,
+				FF2F5E4418377B3F0034435E /* ofxMSAPingPong */,
 				9683228C705CA3FF4F2EA945 /* ofxKinect */,
 				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
 				12C4301E754751A1A30266BD /* ofxGamepad */,
@@ -541,6 +571,7 @@
 			children = (
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				FF2F5E5018377B9E0034435E /* kernels */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
@@ -613,6 +644,67 @@
 				65726280742CD54BF368BDB8 /* libusb-1.0 */,
 			);
 			name = libs;
+			sourceTree = "<group>";
+		};
+		FF2F5E3118377B3F0034435E /* ofxMSAOpenCL */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F5E3218377B3F0034435E /* .gitignore */,
+				FF2F5E3318377B3F0034435E /* license.md */,
+				FF2F5E3418377B3F0034435E /* README.md */,
+				FF2F5E3518377B3F0034435E /* src */,
+			);
+			name = ofxMSAOpenCL;
+			path = ../../../addons/ofxMSAOpenCL;
+			sourceTree = "<group>";
+		};
+		FF2F5E3518377B3F0034435E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F5E3618377B3F0034435E /* MSAOpenCL.cpp */,
+				FF2F5E3718377B3F0034435E /* MSAOpenCL.h */,
+				FF2F5E3818377B3F0034435E /* MSAOpenCLBuffer.cpp */,
+				FF2F5E3918377B3F0034435E /* MSAOpenCLBuffer.h */,
+				FF2F5E3A18377B3F0034435E /* MSAOpenCLImage.cpp */,
+				FF2F5E3B18377B3F0034435E /* MSAOpenCLImage.h */,
+				FF2F5E3C18377B3F0034435E /* MSAOpenCLImagePingPong.h */,
+				FF2F5E3D18377B3F0034435E /* MSAOpenCLKernel.cpp */,
+				FF2F5E3E18377B3F0034435E /* MSAOpenCLKernel.h */,
+				FF2F5E3F18377B3F0034435E /* MSAOpenCLMemoryObject.cpp */,
+				FF2F5E4018377B3F0034435E /* MSAOpenCLMemoryObject.h */,
+				FF2F5E4118377B3F0034435E /* MSAOpenCLProgram.cpp */,
+				FF2F5E4218377B3F0034435E /* MSAOpenCLProgram.h */,
+				FF2F5E4318377B3F0034435E /* MSAOpenCLTypes.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		FF2F5E4418377B3F0034435E /* ofxMSAPingPong */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F5E4518377B3F0034435E /* .gitignore */,
+				FF2F5E4618377B3F0034435E /* license.md */,
+				FF2F5E4718377B3F0034435E /* README.md */,
+				FF2F5E4818377B3F0034435E /* src */,
+			);
+			name = ofxMSAPingPong;
+			path = ../../../addons/ofxMSAPingPong;
+			sourceTree = "<group>";
+		};
+		FF2F5E4818377B3F0034435E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F5E4918377B3F0034435E /* MSAPingPong.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		FF2F5E5018377B9E0034435E /* kernels */ = {
+			isa = PBXGroup;
+			children = (
+				FF2F5E5118377BBA0034435E /* boids.cl */,
+			);
+			name = kernels;
 			sourceTree = "<group>";
 		};
 		FF8CDF57858E9B94E3237115 /* ip */ = {
@@ -721,9 +813,11 @@
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				686B0DF6249B52E1A85B39EC /* ofxKinect.cpp in Sources */,
 				ACE7DC9A3223ED5EE1B80074 /* cameras.c in Sources */,
+				FF2F5E4E18377B3F0034435E /* MSAOpenCLMemoryObject.cpp in Sources */,
 				F4135EEFC911E9ED211FB6F9 /* core.c in Sources */,
 				D31F5C1B140C59B2AF1533A8 /* registration.c in Sources */,
 				49BEEB2DFA5319D55AA6899F /* tilt.c in Sources */,
+				FF2F5E4D18377B3F0034435E /* MSAOpenCLKernel.cpp in Sources */,
 				255A7B680DC81E543C875794 /* usb_libusb10.c in Sources */,
 				72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
@@ -731,7 +825,10 @@
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,
 				8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */,
 				ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */,
+				FF2F5E4C18377B3F0034435E /* MSAOpenCLImage.cpp in Sources */,
+				FF2F5E4B18377B3F0034435E /* MSAOpenCLBuffer.cpp in Sources */,
 				67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */,
+				FF2F5E4F18377B3F0034435E /* MSAOpenCLProgram.cpp in Sources */,
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
 				A29D8C96AE042ECEAA1BD4F3 /* NetworkingUtilsWin.cpp in Sources */,
 				28090DEB5109115003E8F1C5 /* UdpSocketWin.cpp in Sources */,
@@ -739,6 +836,7 @@
 				FFD94D7E1828562A00E01259 /* Boid.cpp in Sources */,
 				C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */,
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
+				FF2F5E4A18377B3F0034435E /* MSAOpenCL.cpp in Sources */,
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 				CC31DA173FF109FFC257057C /* ofxGamepad.cpp in Sources */,
 				CA0674ED872DC2F0706DF4EF /* ofxGamepadCamera.cpp in Sources */,
