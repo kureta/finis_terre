@@ -1,6 +1,6 @@
 #include "testApp.h"
 
-string path = "take-08";
+string path = "take-04";
 int numFrames = 0;
 int currentFrame = 0;
 bool playing = false;
