@@ -17,12 +17,12 @@ Boid::Boid(ofVec3f inPos, ofColor ic)
     acc = ofVec3f(0.0f, 0.0f, 0.0f);
     c = ic;
     cn = ic;
-    maxSpeed = 8.0f; // maxSpeed = c.r *6.0/255 + 2;
-    maxPicSpeed = 64.0f;
+    maxSpeed = 16.0f; // maxSpeed = c.r *6.0/255 + 2;
+    maxPicSpeed = 16.0f;
     float sat = c.getSaturation() /255.0;
     float br = (c.getBrightness()/255.0);
-    maxSteerForce = .1f; // maxSteerForce = .1 + (sat*br)*.1;
-    maxPicForce = 4.0f;
+    maxSteerForce = .7f; // maxSteerForce = .1 + (sat*br)*.1;
+    maxPicForce = .3f;
 }
 
 void Boid::colorSwap(ofColor nextColor)
@@ -31,9 +31,9 @@ void Boid::colorSwap(ofColor nextColor)
 }
 
 // this function triggers boid behavior
-void Boid::flocking()
+void Boid::flocking(ofVec3f _atr)
 {
-    acc += steer(ofVec3f(ofRandom(-2000, 2000), ofRandom(-2000,2000), ofRandom(1000, 3000)), false);
+    acc += steer(_atr + ofVec3f(ofRandom(-300, 300),ofRandom(-300, 300),ofRandom(-300, 300)), false);
     move(false);
     //checkBounds();
     //render();
@@ -79,7 +79,7 @@ void Boid::move(bool arrival)
     
     if (an < a){
         a -= 5;
-    } else {
+    } else if (an > a){
         a += 10;
     }
     if (a > 255)

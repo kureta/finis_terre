@@ -1,14 +1,16 @@
 #include "testApp.h"
 
-string path = "take-04";
-int numFrames = 0;
-int currentFrame = 0;
-bool playing = false;
-ofDirectory vert(path);
-ofDirectory col(path);
+int currentScene = 0;
 
-vector<int> colors;
-vector<int> vertices;
+//string path = "take-04";
+//int numFrames = 0;
+//int currentFrame = 0;
+bool playing = false;
+//ofDirectory vert(path);
+//ofDirectory col(path);
+//
+//vector<int> colors;
+//vector<int> vertices;
 
 unsigned long long initialTime = 0;
 int frameTime = 0;
@@ -38,43 +40,43 @@ float maxz = 2800.0f;
 
 //--------------------------------------------------------------
 void testApp::setup() {
-    //some path, may be absolute or relative to bin/data
-    ofDirectory dir(path);
-    //only show png files
-    dir.allowExt("col");
-    //populate the directory object
-    dir.listDir();
+//    //some path, may be absolute or relative to bin/data
+//    ofDirectory dir(path);
+//    //only show png files
+//    dir.allowExt("col");
+//    //populate the directory object
+//    dir.listDir();
+//    
+//    //go through and print out all the paths
+//    for(int i = 0; i < dir.numFiles(); i++){
+//        string temp = dir.getPath(i);
+//        temp.erase(0,13);
+//        temp.erase(temp.end()-4, temp.end());
+//        colors.push_back(ofToInt(temp));
+//    }
+//    std::sort(colors.begin(), colors.end());
+//    ofDirectory dir2(path);
+//    dir2.allowExt("vert");
+//    //populate the directory object
+//    dir2.listDir();
+//    
+//    //go through and print out all the paths
+//    for(int i = 0; i < dir2.numFiles(); i++){
+//        string temp = dir2.getPath(i);
+//        temp.erase(0,15);
+//        temp.erase(temp.end()-5, temp.end());
+//        vertices.push_back(ofToInt(temp));
+//    }
+//    std::sort(vertices.begin(), vertices.end());
+//    //only show png files
+//    vert.allowExt("vert");
+//    col.allowExt("col");
+//    //populate the directory object
+//    vert.listDir();
+//    col.listDir();
+//    numFrames = vert.size();
     
-    //go through and print out all the paths
-    for(int i = 0; i < dir.numFiles(); i++){
-        string temp = dir.getPath(i);
-        temp.erase(0,13);
-        temp.erase(temp.end()-4, temp.end());
-        colors.push_back(ofToInt(temp));
-    }
-    std::sort(colors.begin(), colors.end());
-    ofDirectory dir2(path);
-    dir2.allowExt("vert");
-    //populate the directory object
-    dir2.listDir();
-    
-    //go through and print out all the paths
-    for(int i = 0; i < dir2.numFiles(); i++){
-        string temp = dir2.getPath(i);
-        temp.erase(0,15);
-        temp.erase(temp.end()-5, temp.end());
-        vertices.push_back(ofToInt(temp));
-    }
-    std::sort(vertices.begin(), vertices.end());
-    //only show png files
-    vert.allowExt("vert");
-    col.allowExt("col");
-    //populate the directory object
-    vert.listDir();
-    col.listDir();
-    numFrames = vert.size();
-    
-	ofSetLogLevel(OF_LOG_VERBOSE);
+	ofSetLogLevel(OF_LOG_WARNING);
 	
 	nearThreshold = 250;
 	farThreshold = 2000;
@@ -89,7 +91,7 @@ void testApp::setup() {
     dx = 0.0; dy = 0.0; dz = 0.0;
     drx = 0.0; dry = 0.0;
     ofxGamepadHandler::get()->enableHotplug();
-    easyCam.disableMouseInput();
+    //easyCam.disableMouseInput();
     easyCam.dolly(500.0);
     
 	//CHECK IF THERE EVEN IS A GAMEPAD CONNECTED
@@ -102,6 +104,11 @@ void testApp::setup() {
     
     createBoids();
     ofSetBackgroundAuto(true);
+    
+    scenes.push_back(Scene("take-01"));
+    scenes.push_back(Scene("take-02"));
+    scenes.push_back(Scene("take-03"));
+    scenes.push_back(Scene("take-08"));
 }
 
 //--------------------------------------------------------------
@@ -167,12 +174,12 @@ void testApp::draw() {
         // myImage[currentFrame%8].grabScreen(0, 0, 1280, 720);
         // myImage[currentFrame%8].saveThreaded("exported-frames/" + ofToString(currentFrame) + ".png");
     }
-    if (frameTime > vertices[currentFrame])
+    if (frameTime > scenes[currentScene].vertices[scenes[currentScene].currentFrame])
     {
-        currentFrame++;
+        scenes[currentScene].currentFrame++;
     }
-    if (currentFrame > numFrames) {
-        currentFrame = 1;
+    if (scenes[currentScene].currentFrame > scenes[currentScene].numFrames) {
+        scenes[currentScene].currentFrame = 1;
         initialTime = ofGetSystemTimeMicros();
     }
     
@@ -202,11 +209,11 @@ void testApp::drawPointCloud() {
     ofMesh lines;
     lines.setMode(OF_PRIMITIVE_POINTS);
     
-    const char *fname = (path + "/vertice" + ofToString(vertices[currentFrame]) + ".vert").c_str();
+    const char *fname = (scenes[currentScene].path + "/vertice" + ofToString(scenes[currentScene].vertices[scenes[currentScene].currentFrame]) + ".vert").c_str();
     ofBuffer temp = ofBufferFromFile(fname, true);
     myPoint *fposition = (myPoint*)temp.getBinaryBuffer();
     
-    const char *fname2 = (path + "/color" + ofToString(vertices[currentFrame]) + ".col").c_str();
+    const char *fname2 = (scenes[currentScene].path + "/color" + ofToString(scenes[currentScene].vertices[scenes[currentScene].currentFrame]) + ".col").c_str();
     ofBuffer temp2 = ofBufferFromFile(fname2, true);
     myColor *fcolor = (myColor*)temp2.getBinaryBuffer();
     
@@ -222,13 +229,20 @@ void testApp::drawPointCloud() {
         color.g = fcolor[i].g;
         color.b = fcolor[i].b;
         
+        bool condition = currentScene == 2 ? position.x < maxx &&
+        position.x > minx &&
+        position.y < maxy &&
+        position.y > miny &&
+        position.z < maxz &&
+        position.z > minz : ofVec3f(position.x,-position.y,-position.z).distance(easyCam.getPosition())< 2000.0f;
+        
         if (/*position.x < maxx &&
             position.x > minx &&
             position.y < maxy &&
             position.y > miny &&
             position.z < maxz &&
             position.z > minz &&*/
-            ofVec3f(position.x,-position.y,-position.z).distance(easyCam.getPosition())< 2000.0f &&
+            condition &&
             position.length() > 10.0f)
         {
             color.a = 255;
@@ -236,11 +250,11 @@ void testApp::drawPointCloud() {
             boids[i].cn = color;
             boids[i].picture();
             lines.addVertex(position);
-            lines.addColor(ofColor(ofColor::blueSteel, 65));
+            lines.addColor(ofColor(ofColor::blueSteel, 20));
             
         } else {
             boids[i].cn = ofColor(255,255,255,0);
-            boids[i].flocking();
+            boids[i].flocking(attractor());
         }
         
         mesh.addColor(boids[i].c);
@@ -273,9 +287,20 @@ void testApp::drawPointCloud() {
 	glPointParameterf(GL_POINT_SIZE_MAX, 256.0f);
 	glPointParameterfv(GL_POINT_DISTANCE_ATTENUATION, att);
     mesh.drawVertices();
-    lines.drawVertices();
+    //lines.drawVertices();
     if (useShader) shader.end();
     ofPopMatrix();
+}
+
+ofVec3f testApp::attractor()
+{
+    float t = frameTime * 0.0001;
+    
+    float x = (sin(t*3)+sin(t*11)) * 2000.0f;
+    float y = (sin(t*5)+sin(t*13)) * 2000.0f;
+    float z = (sin(t*7)+sin(t*17)) * 2000.0f + 1000.0f;
+    
+    return ofVec3f(x,y,z);
 }
 
 //--------------------------------------------------------------
@@ -286,6 +311,18 @@ void testApp::exit() {
 //--------------------------------------------------------------
 void testApp::keyPressed (int key) {
 	switch (key) {
+        case '1':
+            currentScene = 0;
+            break;
+        case '2':
+            currentScene = 1;
+            break;
+        case '3':
+            currentScene = 2;
+            break;
+        case '4':
+            currentScene = 3;
+            break;
 		case 'a':
 			minx +=10.0f;
 			break;
@@ -344,8 +381,8 @@ void testApp::keyPressed (int key) {
             break;
         
         case 'p':
-            myImage[currentFrame%8].grabScreen(0, 0, 1280, 720);
-            myImage[currentFrame%8].saveThreaded("exported-frames/" + ofToString(currentFrame) + ".png");
+            //myImage[currentFrame%8].grabScreen(0, 0, 1280, 720);
+            //myImage[currentFrame%8].saveThreaded("exported-frames/" + ofToString(currentFrame) + ".png");
             break;
 	}
 }

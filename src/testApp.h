@@ -4,6 +4,7 @@
 #include "ofxGamepadHandler.h"
 #include "Boid.h"
 #include "threadedObject.h"
+#include "Scene.h"
 
 class testApp : public ofBaseApp {
 public:
@@ -46,5 +47,9 @@ public:
     void createBoids();
     vector<Boid> boids;
     
+    vector<Scene> scenes;
+    
     threadedObject myImage[8];
+    
+    ofVec3f attractor();
 };

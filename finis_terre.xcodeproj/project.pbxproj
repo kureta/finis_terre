@@ -32,6 +32,7 @@
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		EF00D09A7AA7C08FDC63ED88 /* ofxGamepadHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57751ED3A944BF55EB9C9302 /* ofxGamepadHandler.cpp */; };
+		FF26934E183ABD4100956DAA /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF26934C183ABD4100956DAA /* Scene.cpp */; };
 		FFD94D7E1828562A00E01259 /* Boid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FFD94D7C1828562A00E01259 /* Boid.cpp */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,8 @@
 		F0299CC174D3AC75190E071E /* ofxGamepadHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadHandler.h; path = ../../../addons/ofxGamepad/src/ofxGamepadHandler.h; sourceTree = SOURCE_ROOT; };
 		FC5665461DF9211A8FB4AE83 /* ofxGamepadOIS.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadOIS.cpp; path = ../../../addons/ofxGamepad/src/ofxGamepadOIS.cpp; sourceTree = SOURCE_ROOT; };
 		FEDD2BE696CAB3D245F8279A /* MacInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacInputManager.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacInputManager.h; sourceTree = SOURCE_ROOT; };
+		FF26934C183ABD4100956DAA /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		FF26934D183ABD4100956DAA /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		FF2F5E5118377BBA0034435E /* boids.cl */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.opencl; name = boids.cl; path = bin/data/kernels/boids.cl; sourceTree = "<group>"; };
 		FF2F5E5718379CDE0034435E /* threadedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = threadedObject.h; sourceTree = "<group>"; };
 		FFD94D7C1828562A00E01259 /* Boid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boid.cpp; sourceTree = "<group>"; };
@@ -357,6 +360,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				FFD94D7C1828562A00E01259 /* Boid.cpp */,
 				FFD94D7D1828562A00E01259 /* Boid.h */,
+				FF26934C183ABD4100956DAA /* Scene.cpp */,
+				FF26934D183ABD4100956DAA /* Scene.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -466,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				FF26934E183ABD4100956DAA /* Scene.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				FFD94D7E1828562A00E01259 /* Boid.cpp in Sources */,
 				CC31DA173FF109FFC257057C /* ofxGamepad.cpp in Sources */,

@@ -22,12 +22,13 @@ public:
     //constructors
     Boid(ofVec3f inPos, ofColor ic);
     
-    void flocking();
+    void flocking(ofVec3f _atr);
     void picture();
     void move(bool arrival);
     ofVec3f steer(ofVec3f target, Boolean arrival);
     
     void colorSwap(ofColor nextColor);
+    ofVec3f attractor;
 };
 
 #endif /* defined(__finis_terre__Boid__) */
