@@ -2,15 +2,7 @@
 
 int currentScene = 0;
 
-//string path = "take-04";
-//int numFrames = 0;
-//int currentFrame = 0;
 bool playing = false;
-//ofDirectory vert(path);
-//ofDirectory col(path);
-//
-//vector<int> colors;
-//vector<int> vertices;
 
 unsigned long long initialTime = 0;
 int frameTime = 0;
@@ -40,42 +32,6 @@ float maxz = 2800.0f;
 
 //--------------------------------------------------------------
 void testApp::setup() {
-//    //some path, may be absolute or relative to bin/data
-//    ofDirectory dir(path);
-//    //only show png files
-//    dir.allowExt("col");
-//    //populate the directory object
-//    dir.listDir();
-//    
-//    //go through and print out all the paths
-//    for(int i = 0; i < dir.numFiles(); i++){
-//        string temp = dir.getPath(i);
-//        temp.erase(0,13);
-//        temp.erase(temp.end()-4, temp.end());
-//        colors.push_back(ofToInt(temp));
-//    }
-//    std::sort(colors.begin(), colors.end());
-//    ofDirectory dir2(path);
-//    dir2.allowExt("vert");
-//    //populate the directory object
-//    dir2.listDir();
-//    
-//    //go through and print out all the paths
-//    for(int i = 0; i < dir2.numFiles(); i++){
-//        string temp = dir2.getPath(i);
-//        temp.erase(0,15);
-//        temp.erase(temp.end()-5, temp.end());
-//        vertices.push_back(ofToInt(temp));
-//    }
-//    std::sort(vertices.begin(), vertices.end());
-//    //only show png files
-//    vert.allowExt("vert");
-//    col.allowExt("col");
-//    //populate the directory object
-//    vert.listDir();
-//    col.listDir();
-//    numFrames = vert.size();
-    
 	ofSetLogLevel(OF_LOG_WARNING);
 	
 	nearThreshold = 250;
@@ -87,11 +43,11 @@ void testApp::setup() {
     ofDisableArbTex();
     texture.loadImage("particle.png");
     
-    posSpeed = 8.0; rotSpeed = 2.0;
+    posSpeed = 16.0; rotSpeed = 4.0;
     dx = 0.0; dy = 0.0; dz = 0.0;
     drx = 0.0; dry = 0.0;
     ofxGamepadHandler::get()->enableHotplug();
-    //easyCam.disableMouseInput();
+    easyCam.disableMouseInput();
     easyCam.dolly(500.0);
     
 	//CHECK IF THERE EVEN IS A GAMEPAD CONNECTED
@@ -209,11 +165,11 @@ void testApp::drawPointCloud() {
     ofMesh lines;
     lines.setMode(OF_PRIMITIVE_POINTS);
     
-    const char *fname = (scenes[currentScene].path + "/vertice" + ofToString(scenes[currentScene].vertices[scenes[currentScene].currentFrame]) + ".vert").c_str();
+    const char *fname = (scenes[currentScene].path + "/vertice" + ofToString(scenes[currentScene].vertices[scenes[currentScene].currentFrame % scenes[currentScene].numFrames]) + ".vert").c_str();
     ofBuffer temp = ofBufferFromFile(fname, true);
     myPoint *fposition = (myPoint*)temp.getBinaryBuffer();
     
-    const char *fname2 = (scenes[currentScene].path + "/color" + ofToString(scenes[currentScene].vertices[scenes[currentScene].currentFrame]) + ".col").c_str();
+    const char *fname2 = (scenes[currentScene].path + "/color" + ofToString(scenes[currentScene].vertices[scenes[currentScene].currentFrame % scenes[currentScene].numFrames]) + ".col").c_str();
     ofBuffer temp2 = ofBufferFromFile(fname2, true);
     myColor *fcolor = (myColor*)temp2.getBinaryBuffer();
     
@@ -234,16 +190,9 @@ void testApp::drawPointCloud() {
         position.y < maxy &&
         position.y > miny &&
         position.z < maxz &&
-        position.z > minz : ofVec3f(position.x,-position.y,-position.z).distance(easyCam.getPosition())< 2000.0f;
+        position.z > minz : position.z < 1500.0f;
         
-        if (/*position.x < maxx &&
-            position.x > minx &&
-            position.y < maxy &&
-            position.y > miny &&
-            position.z < maxz &&
-            position.z > minz &&*/
-            condition &&
-            position.length() > 10.0f)
+        if (condition && position.length() > 10.0f)
         {
             color.a = 255;
             boids[i].initPos = position;
@@ -296,9 +245,9 @@ ofVec3f testApp::attractor()
 {
     float t = frameTime * 0.0001;
     
-    float x = (sin(t*3)+sin(t*11)) * 2000.0f;
-    float y = (sin(t*5)+sin(t*13)) * 2000.0f;
-    float z = (sin(t*7)+sin(t*17)) * 2000.0f + 1000.0f;
+    float x = (sin(t*3)+sin(t*11)) * 1000.0f;
+    float y = (sin(t*5)+sin(t*13)) * 1000.0f;
+    float z = (sin(t*7)+sin(t*17)) * 1000.0f + 1000.0f;
     
     return ofVec3f(x,y,z);
 }
