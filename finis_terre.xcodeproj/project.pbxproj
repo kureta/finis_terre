@@ -67,47 +67,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		068B7A1248FCF7D5888C8ECE /* OISJoyStick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISJoyStick.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISJoyStick.h; sourceTree = SOURCE_ROOT; };
-		08D3F505111C33F24A95EE34 /* OISFactoryCreator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISFactoryCreator.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISFactoryCreator.h; sourceTree = SOURCE_ROOT; };
-		115B8091605FA9119BD559BA /* Win32Mouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32Mouse.h; path = ../../../addons/ofxGamepad/libs/wgois/include/win32/Win32Mouse.h; sourceTree = SOURCE_ROOT; };
-		12DDB56ED07C76BE077A61F9 /* OISMultiTouch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISMultiTouch.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISMultiTouch.h; sourceTree = SOURCE_ROOT; };
-		12E52F1A9FB9919C7461754E /* OISKeyboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISKeyboard.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISKeyboard.h; sourceTree = SOURCE_ROOT; };
-		15280807AE4C24AD98EC5727 /* OISPrereqs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISPrereqs.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISPrereqs.h; sourceTree = SOURCE_ROOT; };
-		289D23B52493F93798C687DC /* EventHelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = EventHelpers.h; path = ../../../addons/ofxGamepad/libs/wgois/include/linux/EventHelpers.h; sourceTree = SOURCE_ROOT; };
-		2B6E08AE010A7A8F52671439 /* MacJoyStick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacJoyStick.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacJoyStick.h; sourceTree = SOURCE_ROOT; };
-		2C232993186ADD81E60EFD70 /* OISEffect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISEffect.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISEffect.h; sourceTree = SOURCE_ROOT; };
-		2CA5C50FE8BD154B05014D2E /* ofxGamepad.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepad.cpp; path = ../../../addons/ofxGamepad/src/ofxGamepad.cpp; sourceTree = SOURCE_ROOT; };
-		308FE33C150AC27A54156718 /* Win32Prereqs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32Prereqs.h; path = ../../../addons/ofxGamepad/libs/wgois/include/win32/Win32Prereqs.h; sourceTree = SOURCE_ROOT; };
-		400267F52EF205E46E46032A /* OISException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISException.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISException.h; sourceTree = SOURCE_ROOT; };
-		41BAFB404BFAB233C0EF2229 /* OISConfig.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISConfig.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISConfig.h; sourceTree = SOURCE_ROOT; };
-		422C1858C62E3E94F30FD023 /* OISMouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISMouse.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISMouse.h; sourceTree = SOURCE_ROOT; };
-		507C768F83E80F2D980DAFD1 /* LinuxInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxInputManager.h; path = ../../../addons/ofxGamepad/libs/wgois/include/linux/LinuxInputManager.h; sourceTree = SOURCE_ROOT; };
-		52BBC11098DAA003FDE79F4D /* Win32KeyBoard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32KeyBoard.h; path = ../../../addons/ofxGamepad/libs/wgois/include/win32/Win32KeyBoard.h; sourceTree = SOURCE_ROOT; };
-		55CF7089308EAFFF871F4627 /* LinuxMouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxMouse.h; path = ../../../addons/ofxGamepad/libs/wgois/include/linux/LinuxMouse.h; sourceTree = SOURCE_ROOT; };
-		57751ED3A944BF55EB9C9302 /* ofxGamepadHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadHandler.cpp; path = ../../../addons/ofxGamepad/src/ofxGamepadHandler.cpp; sourceTree = SOURCE_ROOT; };
-		598E3F6FD9FA604FB8B95B27 /* ofxGamepadCamera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadCamera.cpp; path = ../../../addons/ofxGamepad/src/ofxGamepadCamera.cpp; sourceTree = SOURCE_ROOT; };
-		5D9C361DAFF4970D1C636923 /* MacHelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacHelpers.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacHelpers.h; sourceTree = SOURCE_ROOT; };
-		6BBC0670A01F40F117418426 /* MacHIDManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacHIDManager.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacHIDManager.h; sourceTree = SOURCE_ROOT; };
-		73C8E6D96131FD5F50B07549 /* OIS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OIS.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OIS.h; sourceTree = SOURCE_ROOT; };
-		778210F4AE0A2FE553D6FDEB /* Win32InputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32InputManager.h; path = ../../../addons/ofxGamepad/libs/wgois/include/win32/Win32InputManager.h; sourceTree = SOURCE_ROOT; };
-		7CF04C9D2CA53AFEFD8D9A29 /* MacMouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacMouse.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacMouse.h; sourceTree = SOURCE_ROOT; };
-		7ED4B6516D30EAEC5C2F9720 /* LinuxKeyboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxKeyboard.h; path = ../../../addons/ofxGamepad/libs/wgois/include/linux/LinuxKeyboard.h; sourceTree = SOURCE_ROOT; };
-		8760F730B895921E82D89F2C /* OISEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISEvents.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISEvents.h; sourceTree = SOURCE_ROOT; };
-		8EBD531D4D2A9F5DAF1702F5 /* LinuxJoyStickEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxJoyStickEvents.h; path = ../../../addons/ofxGamepad/libs/wgois/include/linux/LinuxJoyStickEvents.h; sourceTree = SOURCE_ROOT; };
-		8F135DC7449671009025F58C /* ofxGamepadConfigs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadConfigs.h; path = ../../../addons/ofxGamepad/src/ofxGamepadConfigs.h; sourceTree = SOURCE_ROOT; };
-		91C3D774602C3F6B442C901E /* ofxGamepadOIS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadOIS.h; path = ../../../addons/ofxGamepad/src/ofxGamepadOIS.h; sourceTree = SOURCE_ROOT; };
-		96BF8BE9BF4F78B480FAE323 /* OISInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISInputManager.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISInputManager.h; sourceTree = SOURCE_ROOT; };
-		982C81B416018ED99E0E0EFF /* MacPrereqs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacPrereqs.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacPrereqs.h; sourceTree = SOURCE_ROOT; };
-		A644CDF2ECC6D52E53277524 /* OISForceFeedback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISForceFeedback.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISForceFeedback.h; sourceTree = SOURCE_ROOT; };
-		AA8E7AABD7D511F7971343E8 /* LinuxPrereqs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxPrereqs.h; path = ../../../addons/ofxGamepad/libs/wgois/include/linux/LinuxPrereqs.h; sourceTree = SOURCE_ROOT; };
-		ACEF60860C401D7F5876913C /* OISInterface.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISInterface.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISInterface.h; sourceTree = SOURCE_ROOT; };
-		B9B954F8D356BFA730F2F622 /* ofxGamepad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepad.h; path = ../../../addons/ofxGamepad/src/ofxGamepad.h; sourceTree = SOURCE_ROOT; };
-		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
-		CD6A83A201C54AEFA4F92EFC /* OISObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISObject.h; path = ../../../addons/ofxGamepad/libs/wgois/include/OISObject.h; sourceTree = SOURCE_ROOT; };
-		CE56DE3CBCB35E711B9C1991 /* LinuxForceFeedback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxForceFeedback.h; path = ../../../addons/ofxGamepad/libs/wgois/include/linux/LinuxForceFeedback.h; sourceTree = SOURCE_ROOT; };
-		DBBE9282DC8CDEDE9FF72941 /* ofxGamepadCamera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadCamera.h; path = ../../../addons/ofxGamepad/src/ofxGamepadCamera.h; sourceTree = SOURCE_ROOT; };
-		DE03DF8F2B155A9A8A32073F /* ofxGamepadLinux.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadLinux.h; path = ../../../addons/ofxGamepad/src/ofxGamepadLinux.h; sourceTree = SOURCE_ROOT; };
-		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		068B7A1248FCF7D5888C8ECE /* OISJoyStick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISJoyStick.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISJoyStick.h; sourceTree = SOURCE_ROOT; };
+		08D3F505111C33F24A95EE34 /* OISFactoryCreator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISFactoryCreator.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISFactoryCreator.h; sourceTree = SOURCE_ROOT; };
+		115B8091605FA9119BD559BA /* Win32Mouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32Mouse.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/win32/Win32Mouse.h; sourceTree = SOURCE_ROOT; };
+		12DDB56ED07C76BE077A61F9 /* OISMultiTouch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISMultiTouch.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISMultiTouch.h; sourceTree = SOURCE_ROOT; };
+		12E52F1A9FB9919C7461754E /* OISKeyboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISKeyboard.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISKeyboard.h; sourceTree = SOURCE_ROOT; };
+		15280807AE4C24AD98EC5727 /* OISPrereqs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISPrereqs.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISPrereqs.h; sourceTree = SOURCE_ROOT; };
+		289D23B52493F93798C687DC /* EventHelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = EventHelpers.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux/EventHelpers.h; sourceTree = SOURCE_ROOT; };
+		2B6E08AE010A7A8F52671439 /* MacJoyStick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacJoyStick.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac/MacJoyStick.h; sourceTree = SOURCE_ROOT; };
+		2C232993186ADD81E60EFD70 /* OISEffect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISEffect.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISEffect.h; sourceTree = SOURCE_ROOT; };
+		2CA5C50FE8BD154B05014D2E /* ofxGamepad.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepad.cpp; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepad.cpp; sourceTree = SOURCE_ROOT; };
+		308FE33C150AC27A54156718 /* Win32Prereqs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32Prereqs.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/win32/Win32Prereqs.h; sourceTree = SOURCE_ROOT; };
+		400267F52EF205E46E46032A /* OISException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISException.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISException.h; sourceTree = SOURCE_ROOT; };
+		41BAFB404BFAB233C0EF2229 /* OISConfig.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISConfig.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISConfig.h; sourceTree = SOURCE_ROOT; };
+		422C1858C62E3E94F30FD023 /* OISMouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISMouse.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISMouse.h; sourceTree = SOURCE_ROOT; };
+		507C768F83E80F2D980DAFD1 /* LinuxInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxInputManager.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux/LinuxInputManager.h; sourceTree = SOURCE_ROOT; };
+		52BBC11098DAA003FDE79F4D /* Win32KeyBoard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32KeyBoard.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/win32/Win32KeyBoard.h; sourceTree = SOURCE_ROOT; };
+		55CF7089308EAFFF871F4627 /* LinuxMouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxMouse.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux/LinuxMouse.h; sourceTree = SOURCE_ROOT; };
+		57751ED3A944BF55EB9C9302 /* ofxGamepadHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadHandler.cpp; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadHandler.cpp; sourceTree = SOURCE_ROOT; };
+		598E3F6FD9FA604FB8B95B27 /* ofxGamepadCamera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadCamera.cpp; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadCamera.cpp; sourceTree = SOURCE_ROOT; };
+		5D9C361DAFF4970D1C636923 /* MacHelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacHelpers.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac/MacHelpers.h; sourceTree = SOURCE_ROOT; };
+		6BBC0670A01F40F117418426 /* MacHIDManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacHIDManager.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac/MacHIDManager.h; sourceTree = SOURCE_ROOT; };
+		73C8E6D96131FD5F50B07549 /* OIS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OIS.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OIS.h; sourceTree = SOURCE_ROOT; };
+		778210F4AE0A2FE553D6FDEB /* Win32InputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32InputManager.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/win32/Win32InputManager.h; sourceTree = SOURCE_ROOT; };
+		7CF04C9D2CA53AFEFD8D9A29 /* MacMouse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacMouse.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac/MacMouse.h; sourceTree = SOURCE_ROOT; };
+		7ED4B6516D30EAEC5C2F9720 /* LinuxKeyboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxKeyboard.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux/LinuxKeyboard.h; sourceTree = SOURCE_ROOT; };
+		8760F730B895921E82D89F2C /* OISEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISEvents.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISEvents.h; sourceTree = SOURCE_ROOT; };
+		8EBD531D4D2A9F5DAF1702F5 /* LinuxJoyStickEvents.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxJoyStickEvents.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux/LinuxJoyStickEvents.h; sourceTree = SOURCE_ROOT; };
+		8F135DC7449671009025F58C /* ofxGamepadConfigs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadConfigs.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadConfigs.h; sourceTree = SOURCE_ROOT; };
+		91C3D774602C3F6B442C901E /* ofxGamepadOIS.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadOIS.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadOIS.h; sourceTree = SOURCE_ROOT; };
+		96BF8BE9BF4F78B480FAE323 /* OISInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISInputManager.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISInputManager.h; sourceTree = SOURCE_ROOT; };
+		982C81B416018ED99E0E0EFF /* MacPrereqs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacPrereqs.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac/MacPrereqs.h; sourceTree = SOURCE_ROOT; };
+		A644CDF2ECC6D52E53277524 /* OISForceFeedback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISForceFeedback.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISForceFeedback.h; sourceTree = SOURCE_ROOT; };
+		AA8E7AABD7D511F7971343E8 /* LinuxPrereqs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxPrereqs.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux/LinuxPrereqs.h; sourceTree = SOURCE_ROOT; };
+		ACEF60860C401D7F5876913C /* OISInterface.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISInterface.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISInterface.h; sourceTree = SOURCE_ROOT; };
+		B9B954F8D356BFA730F2F622 /* ofxGamepad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepad.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepad.h; sourceTree = SOURCE_ROOT; };
+		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../of_v0.8.0_osx_release/libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		CD6A83A201C54AEFA4F92EFC /* OISObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OISObject.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/OISObject.h; sourceTree = SOURCE_ROOT; };
+		CE56DE3CBCB35E711B9C1991 /* LinuxForceFeedback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LinuxForceFeedback.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux/LinuxForceFeedback.h; sourceTree = SOURCE_ROOT; };
+		DBBE9282DC8CDEDE9FF72941 /* ofxGamepadCamera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadCamera.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadCamera.h; sourceTree = SOURCE_ROOT; };
+		DE03DF8F2B155A9A8A32073F /* ofxGamepadLinux.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadLinux.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadLinux.h; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
@@ -125,18 +125,18 @@
 		E4C2424410CC5A17004149E2 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		E4C2424510CC5A17004149E2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
-		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../of_v0.8.0_osx_release/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		E52A4CD6615F2B2DC04AAC73 /* Win32ForceFeedback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32ForceFeedback.h; path = ../../../addons/ofxGamepad/libs/wgois/include/win32/Win32ForceFeedback.h; sourceTree = SOURCE_ROOT; };
-		E6152246D2770497A71900F9 /* MacKeyboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacKeyboard.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacKeyboard.h; sourceTree = SOURCE_ROOT; };
-		E73BB548E0E7E105EDE50B30 /* Win32JoyStick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32JoyStick.h; path = ../../../addons/ofxGamepad/libs/wgois/include/win32/Win32JoyStick.h; sourceTree = SOURCE_ROOT; };
-		E7D275CEC42CF5906CA88D44 /* ofxGamepadLinux.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadLinux.cpp; path = ../../../addons/ofxGamepad/src/ofxGamepadLinux.cpp; sourceTree = SOURCE_ROOT; };
+		E52A4CD6615F2B2DC04AAC73 /* Win32ForceFeedback.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32ForceFeedback.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/win32/Win32ForceFeedback.h; sourceTree = SOURCE_ROOT; };
+		E6152246D2770497A71900F9 /* MacKeyboard.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacKeyboard.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac/MacKeyboard.h; sourceTree = SOURCE_ROOT; };
+		E73BB548E0E7E105EDE50B30 /* Win32JoyStick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Win32JoyStick.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/win32/Win32JoyStick.h; sourceTree = SOURCE_ROOT; };
+		E7D275CEC42CF5906CA88D44 /* ofxGamepadLinux.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadLinux.cpp; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadLinux.cpp; sourceTree = SOURCE_ROOT; };
 		E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		E7E077E715D3B6510020DFD4 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
-		F0299CC174D3AC75190E071E /* ofxGamepadHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadHandler.h; path = ../../../addons/ofxGamepad/src/ofxGamepadHandler.h; sourceTree = SOURCE_ROOT; };
-		FC5665461DF9211A8FB4AE83 /* ofxGamepadOIS.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadOIS.cpp; path = ../../../addons/ofxGamepad/src/ofxGamepadOIS.cpp; sourceTree = SOURCE_ROOT; };
-		FEDD2BE696CAB3D245F8279A /* MacInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacInputManager.h; path = ../../../addons/ofxGamepad/libs/wgois/include/mac/MacInputManager.h; sourceTree = SOURCE_ROOT; };
+		F0299CC174D3AC75190E071E /* ofxGamepadHandler.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGamepadHandler.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadHandler.h; sourceTree = SOURCE_ROOT; };
+		FC5665461DF9211A8FB4AE83 /* ofxGamepadOIS.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGamepadOIS.cpp; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/src/ofxGamepadOIS.cpp; sourceTree = SOURCE_ROOT; };
+		FEDD2BE696CAB3D245F8279A /* MacInputManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacInputManager.h; path = ../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac/MacInputManager.h; sourceTree = SOURCE_ROOT; };
 		FF26934C183ABD4100956DAA /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
 		FF26934D183ABD4100956DAA /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		FF2F5E5118377BBA0034435E /* boids.cl */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.opencl; name = boids.cl; path = bin/data/kernels/boids.cl; sourceTree = "<group>"; };
@@ -461,7 +461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
+			shellScript = "cp -f ../../of_v0.8.0_osx_release/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -515,37 +515,37 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxKinect/libs,
-					../../../addons/ofxKinect/libs/libfreenect,
-					../../../addons/ofxKinect/libs/libfreenect/include,
-					../../../addons/ofxKinect/libs/libfreenect/platform,
-					../../../addons/ofxKinect/libs/libfreenect/src,
-					"../../../addons/ofxKinect/libs/libusb-1.0",
-					"../../../addons/ofxKinect/libs/libusb-1.0/include",
-					"../../../addons/ofxKinect/libs/libusb-1.0/include/libusb-1.0",
-					"../../../addons/ofxKinect/libs/libusb-1.0/lib",
-					"../../../addons/ofxKinect/libs/libusb-1.0/lib/osx",
-					"../../../addons/ofxKinect/libs/libusb-win32",
-					../../../addons/ofxKinect/src,
-					../../../addons/ofxOsc/libs,
-					../../../addons/ofxOsc/libs/oscpack,
-					../../../addons/ofxOsc/libs/oscpack/src,
-					../../../addons/ofxOsc/libs/oscpack/src/ip,
-					../../../addons/ofxOsc/libs/oscpack/src/ip/posix,
-					../../../addons/ofxOsc/libs/oscpack/src/ip/win32,
-					../../../addons/ofxOsc/libs/oscpack/src/osc,
-					../../../addons/ofxOsc/src,
-					../../../addons/ofxGamepad/libs,
-					../../../addons/ofxGamepad/libs/wgois,
-					../../../addons/ofxGamepad/libs/wgois/include,
-					../../../addons/ofxGamepad/libs/wgois/include/linux,
-					../../../addons/ofxGamepad/libs/wgois/include/mac,
-					../../../addons/ofxGamepad/libs/wgois/include/win32,
-					../../../addons/ofxGamepad/libs/wgois/lib,
-					../../../addons/ofxGamepad/libs/wgois/lib/osx,
-					../../../addons/ofxGamepad/libs/wgois/lib/vs2008,
-					../../../addons/ofxGamepad/libs/wgois/lib/vs2010,
-					../../../addons/ofxGamepad/src,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libfreenect,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libfreenect/include,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libfreenect/platform,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libfreenect/src,
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/include",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/include/libusb-1.0",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/lib",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/lib/osx",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-win32",
+					../../of_v0.8.0_osx_release/addons/ofxKinect/src,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/src,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/win32,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib/osx,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib/vs2008,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib/vs2010,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -555,8 +555,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
-					"../../../addons/ofxKinect/libs/libusb-1.0/lib/osx/usb-1.0.a",
-					../../../addons/ofxGamepad/libs/wgois/lib/osx/libOIS.a,
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/lib/osx/usb-1.0.a",
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib/osx/libOIS.a,
 				);
 				SDKROOT = macosx10.8;
 			};
@@ -585,37 +585,37 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(OF_CORE_HEADERS)",
-					../../../addons/ofxKinect/libs,
-					../../../addons/ofxKinect/libs/libfreenect,
-					../../../addons/ofxKinect/libs/libfreenect/include,
-					../../../addons/ofxKinect/libs/libfreenect/platform,
-					../../../addons/ofxKinect/libs/libfreenect/src,
-					"../../../addons/ofxKinect/libs/libusb-1.0",
-					"../../../addons/ofxKinect/libs/libusb-1.0/include",
-					"../../../addons/ofxKinect/libs/libusb-1.0/include/libusb-1.0",
-					"../../../addons/ofxKinect/libs/libusb-1.0/lib",
-					"../../../addons/ofxKinect/libs/libusb-1.0/lib/osx",
-					"../../../addons/ofxKinect/libs/libusb-win32",
-					../../../addons/ofxKinect/src,
-					../../../addons/ofxOsc/libs,
-					../../../addons/ofxOsc/libs/oscpack,
-					../../../addons/ofxOsc/libs/oscpack/src,
-					../../../addons/ofxOsc/libs/oscpack/src/ip,
-					../../../addons/ofxOsc/libs/oscpack/src/ip/posix,
-					../../../addons/ofxOsc/libs/oscpack/src/ip/win32,
-					../../../addons/ofxOsc/libs/oscpack/src/osc,
-					../../../addons/ofxOsc/src,
-					../../../addons/ofxGamepad/libs,
-					../../../addons/ofxGamepad/libs/wgois,
-					../../../addons/ofxGamepad/libs/wgois/include,
-					../../../addons/ofxGamepad/libs/wgois/include/linux,
-					../../../addons/ofxGamepad/libs/wgois/include/mac,
-					../../../addons/ofxGamepad/libs/wgois/include/win32,
-					../../../addons/ofxGamepad/libs/wgois/lib,
-					../../../addons/ofxGamepad/libs/wgois/lib/osx,
-					../../../addons/ofxGamepad/libs/wgois/lib/vs2008,
-					../../../addons/ofxGamepad/libs/wgois/lib/vs2010,
-					../../../addons/ofxGamepad/src,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libfreenect,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libfreenect/include,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libfreenect/platform,
+					../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libfreenect/src,
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/include",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/include/libusb-1.0",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/lib",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/lib/osx",
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-win32",
+					../../of_v0.8.0_osx_release/addons/ofxKinect/src,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../../of_v0.8.0_osx_release/addons/ofxOsc/src,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/linux,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/mac,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/include/win32,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib/osx,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib/vs2008,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib/vs2010,
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
@@ -625,8 +625,8 @@
 				);
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
-					"../../../addons/ofxKinect/libs/libusb-1.0/lib/osx/usb-1.0.a",
-					../../../addons/ofxGamepad/libs/wgois/lib/osx/libOIS.a,
+					"../../of_v0.8.0_osx_release/addons/ofxKinect/libs/libusb-1.0/lib/osx/usb-1.0.a",
+					../../of_v0.8.0_osx_release/addons/ofxGamepad/libs/wgois/lib/osx/libOIS.a,
 				);
 				SDKROOT = macosx10.8;
 			};
@@ -642,7 +642,7 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../of_v0.8.0_osx_release/libs/glut/lib/osx\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
@@ -731,7 +731,7 @@
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
 				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../of_v0.8.0_osx_release/libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
 				ICON = "$(ICON_NAME_RELEASE)";
